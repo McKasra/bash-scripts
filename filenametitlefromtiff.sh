@@ -25,4 +25,4 @@ sed -i '' 's:^\/.*sld:sld:' $pathToCSV"_final.csv"
 # Remove "MS name" (not the directory name) as recorded in TIFF header, e.g. Sinai Arabic 14, from title in column B
 echo MS name as recorded in TIFF header to be removed:
 read MSname
-sed -i "" "s:$MSname ::" $pathToCSV"_final.csv"
+sed -i "" "s:$MSname:f.:" $pathToCSV"_final.csv"
