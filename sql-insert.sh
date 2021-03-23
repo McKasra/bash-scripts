@@ -9,7 +9,7 @@ read DB_table
 # Create .txt file that will contain SQL INSERT STATEMENT and enter DB table name
 echo "INSERT INTO $DB_table (" > SQL_INSERT_$DB_table.txt
 
-# Lists out CSV header as INSERT STATEMENT column names and append to .txt file
+# List out CSV header as INSERT STATEMENT column names and append to .txt file
 echo "`head -n 1 $CSV_file`)" >> SQL_INSERT_$DB_table.txt
 
 # Auto-quote string columns in the .txt file, leaving other columns intact
