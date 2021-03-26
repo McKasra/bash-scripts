@@ -13,5 +13,5 @@ then
     echo "No matches exist."
 else
     printf "Summary Row No: \n`awk -v awkvar="$string" '$0 ~ awkvar{print NR}' $file`" > results_for_$string.txt
-    printf "\nInstance Column No. \n`awk -v awkvar="$string" -F"," '{for(i=1;i<=NF;i++){if ($i ~ awkvar){print i}}}' $file`" >> results_for_$string.txt
+    printf "\nInstance Column No: \n`awk -v awkvar="$string" -F"," '{for(i=1;i<=NF;i++){if ($i ~ awkvar){print i}}}' $file`" >> results_for_$string.txt
 fi
