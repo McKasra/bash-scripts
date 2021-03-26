@@ -6,7 +6,7 @@ read file
 echo Literal or regex string to find:
 read string
 
-# Define variable and test if any matches are to be found; if not, notification is sent to terminal, but if matches exist, their row numbers (as summary rows) and individual column numbers will be output to a .txt file in the home directory
+# Define variable and test if any matches are to be found; if not, notification is sent to terminal, but if matches exist, their row numbers (as summary rows) and individual column numbers will be output to a .txt file in the home directory. NB: you need to escape minus symbol with brackets, [-], so that it's not confused with an invalid grep option!
 matchesFound=$(cat $file | grep -E -c "$string")
 if [ $matchesFound -eq 0 ];
 then
